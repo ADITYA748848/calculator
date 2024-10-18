@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lending Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Lending Calculator</h1>
+        <form id="calculator-form">
+            <label for="loan-amount">Loan Amount ($):</label>
+            <input type="number" id="loan-amount" required>
+
+            <label for="interest-rate">Interest Rate (%):</label>
+            <input type="number" id="interest-rate" step="0.01" required>
+
+            <label for="loan-term">Loan Term (years):</label>
+            <input type="number" id="loan-term" required>
+
+            <button type="submit">Calculate</button>
+            <button type="button" onclick="printResults()">Print</button>
+            <button type="button" onclick="downloadResults()">Download</button>
+        </form>
+
+        <div id="results" class="results"></div>
+        <div>
+            <canvas id="pieChart"></canvas>
+            <canvas id="barChart"></canvas>
+            <canvas id="histogram"></canvas>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
